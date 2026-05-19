@@ -8,7 +8,10 @@
         :root { --primary: #1e3a8a; --secondary: #0284c7; --dark: #0f172a; --light: #f8fafc; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
         body { background-color: var(--light); color: var(--dark); padding: 20px; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: relative; }
+        .lang-switcher { text-align: right; margin-bottom: 15px; }
+        .lang-btn { background: #e2e8f0; border: none; padding: 6px 12px; font-weight: bold; border-radius: 4px; cursor: pointer; color: var(--dark); margin-left: 5px; font-size: 13px; }
+        .lang-btn.active { background: var(--secondary); color: white; }
         .header { text-align: center; margin-bottom: 30px; }
         .header h1 { color: var(--primary); font-size: 24px; margin-bottom: 10px; }
         .header p { color: #64748b; font-size: 14px; }
@@ -16,24 +19,81 @@
         .card h2 { font-size: 18px; margin-bottom: 8px; color: var(--primary); }
         .card p { font-size: 14px; margin-bottom: 15px; color: #475569; }
         .btn { display: block; text-align: center; background: var(--primary); color: white; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+        .footer { text-align: center; margin-top: 30px; font-size: 11px; color: #94a3b8; }
+        [lang="en"] { display: none; }
     </style>
 </head>
 <body>
+
 <div class="container">
-    <div class="header">
-        <h1>Send Network San Diego</h1>
-        <p>Investigación Doctoral: Modelo Práctico de Salud Integral Pastoral</p>
+    <!-- Botones de Cambio de Idioma -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLanguage('es')">Español</button>
+        <button class="lang-btn" onclick="setLanguage('en')">English</button>
     </div>
-    <div class="card">
-        <h2>Apéndice A: Cuestionario de Salud</h2>
-        <p>Evalúa tus niveles de actividad física, hábitos alimenticios y sintomatología de estrés.</p>
-        <a href="https://google.com" target="_blank" class="btn">Comenzar Encuesta</a>
+
+    <!-- Contenido en Español -->
+    <div id="content-es" lang="es">
+        <div class="header">
+            <h1>Send Network San Diego</h1>
+            <p>Investigación Doctoral: Modelo Práctico de Salud Integral Pastoral</p>
+        </div>
+        <div class="card">
+            <h2>Apéndice A: Cuestionario de Salud</h2>
+            <p>Evalúa tus niveles de actividad física, hábitos alimenticios y sintomatología de estrés.</p>
+            <a href="https://google.com" target="_blank" class="btn">Comenzar Encuesta</a>
+        </div>
+        <div class="card">
+            <h2>Apéndice B: Entrevista de Autocuidado</h2>
+            <p>Exclusivo para líderes regionales y pastores veteranos de la red.</p>
+            <a href="https://google.com" target="_blank" class="btn">Responder Entrevista</a>
+        </div>
+        <div class="footer">
+            <p>© 2026 Proyecto de Investigación Doctoral. Todos los datos recopilados son estrictamente confidenciales.</p>
+        </div>
     </div>
-    <div class="card">
-        <h2>Apéndice B: Entrevista de Autocuidado</h2>
-        <p>Exclusivo para líderes regionales y pastores veteranos de la red.</p>
-        <a href="https://google.com" target="_blank" class="btn">Responder Entrevista</a>
+
+    <!-- Contenido en Inglés -->
+    <div id="content-en" lang="en">
+        <div class="header">
+            <h1>Send Network San Diego</h1>
+            <p>Doctoral Research: Practical Model for Pastoral Comprehensive Health</p>
+        </div>
+        <div class="card">
+            <h2>Appendix A: Health Questionnaire</h2>
+            <p>Evaluate your physical activity levels, dietary habits, and stress symptoms.</p>
+            <a href="https://google.com" target="_blank" class="btn">Start Survey</a>
+        </div>
+        <div class="card">
+            <h2>Appendix B: Self-Care Interview</h2>
+            <p>Exclusive for regional leaders and veteran pastors of the network.</p>
+            <a href="https://google.com" target="_blank" class="btn">Answer Interview</a>
+        </div>
+        <div class="footer">
+            <p>© 2026 Doctoral Research Project. All collected data is strictly confidential.</p>
+        </div>
     </div>
 </div>
+
+<script>
+    function setLanguage(lang) {
+        const esContent = document.getElementById('content-es');
+        const enContent = document.getElementById('content-en');
+        const buttons = document.querySelectorAll('.lang-btn');
+
+        if (lang === 'es') {
+            esContent.style.display = 'block';
+            enContent.style.display = 'none';
+            buttons[0].classList.add('active');
+            buttons[1].classList.remove('active');
+        } else {
+            esContent.style.display = 'none';
+            enContent.style.display = 'block';
+            buttons[0].classList.remove('active');
+            buttons[1].classList.add('active');
+        }
+    }
+</script>
+
 </body>
 </html>
