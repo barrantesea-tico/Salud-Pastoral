@@ -26,10 +26,10 @@
 <body>
 
 <div class="container">
-    <!-- Botones de Cambio de Idioma -->
+    <!-- Cambio de Idioma -->
     <div class="lang-switcher">
-        <button class="lang-btn active" onclick="setLanguage('es')">Español</button>
-        <button class="lang-btn" onclick="setLanguage('en')">English</button>
+        <button id="btn-es" class="lang-btn active" onclick="setLanguage('es')">Español</button>
+        <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">English</button>
     </div>
 
     <!-- Contenido en Español -->
@@ -79,18 +79,19 @@
     function setLanguage(lang) {
         const esContent = document.getElementById('content-es');
         const enContent = document.getElementById('content-en');
-        const buttons = document.querySelectorAll('.lang-btn');
+        const btnEs = document.getElementById('btn-es');
+        const btnEn = document.getElementById('btn-en');
 
         if (lang === 'es') {
             esContent.style.display = 'block';
             enContent.style.display = 'none';
-            buttons[0].classList.add('active');
-            buttons[1].classList.remove('active');
+            btnEs.classList.add('active');
+            btnEn.classList.remove('active');
         } else {
             esContent.style.display = 'none';
             enContent.style.display = 'block';
-            buttons[0].classList.remove('active');
-            buttons[1].classList.add('active');
+            btnEs.classList.remove('active');
+            btnEn.classList.add('active');
         }
     }
 </script>
