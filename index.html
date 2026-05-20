@@ -18,7 +18,7 @@
         
         /* Sección de Imágenes Visuales */
         .image-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
-        .image-item { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .image-item { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: block; }
         
         .description { font-size: 15px; color: #475569; margin-bottom: 25px; line-height: 1.6; text-align: center; }
         .btn { display: block; text-align: center; background: var(--primary); color: white; padding: 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 16px; transition: background 0.3s; }
@@ -36,11 +36,11 @@
         <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">English</button>
     </div>
 
-    <!-- Galería Visual: Nutrición, Ejercicio y Gente Feliz -->
+    <!-- Galería Visual Corregida (Nutrición, Ejercicio y Gente Feliz) -->
     <div class="image-grid">
-        <img class="image-item" src="https://unsplash.com" alt="Nutrición Saludable">
-        <img class="image-item" src="https://unsplash.com" alt="Ejercicio Físico">
-        <img class="image-item" src="https://unsplash.com" alt="Gente Feliz y Saludable">
+        <img class="image-item" src="https://picsum.photos" alt="Nutrición">
+        <img class="image-item" src="https://picsum.photos" alt="Ejercicio">
+        <img class="image-item" src="https://picsum.photos" alt="Bienestar">
     </div>
 
     <!-- CONTENIDO EN ESPAÑOL -->
@@ -52,7 +52,7 @@
         <div class="description">
             Este cuestionario evalúa los niveles de actividad física, hábitos alimenticios y sintomatología de estrés en el liderazgo ministerial. Toda la información es estrictamente confidencial.
         </div>
-        <a href="https://google.com" target="_blank" class="btn">Comenzar Cuestionario Doctoral</a>
+        <a href="https://google.com" target="_blank" class="btn">Comenzar cuestionario</a>
         <div class="footer">
             <p>© 2026 Proyecto de Investigación Doctoral. Todos los datos recopilados se utilizarán únicamente con fines académicos.</p>
         </div>
@@ -67,7 +67,7 @@
         <div class="description">
             This questionnaire evaluates physical activity levels, dietary habits, and stress symptoms in ministerial leadership. All information is strictly confidential.
         </div>
-        <a href="https://google.com" target="_blank" class="btn">Start Doctoral Questionnaire</a>
+        <a href="https://google.com" target="_blank" class="btn">Start survey</a>
         <div class="footer">
             <p>© 2026 Doctoral Research Project. All collected data will be used solely for academic purposes.</p>
         </div>
