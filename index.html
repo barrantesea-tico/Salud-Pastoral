@@ -3,106 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investigación Doctoral: Salud Integral Pastoral</title>
-    <!-- Evita que el navegador use memoria vieja con el error anterior -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <title>Investigación Doctoral</title>
     <style>
-        :root { --primary: #1e3a8a; --secondary: #0284c7; --dark: #0f172a; --light: #f8fafc; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
-        body { background-color: var(--light); color: var(--dark); padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
-        .container { max-width: 600px; width: 100%; background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: relative; }
-        .lang-switcher { text-align: right; margin-bottom: 20px; }
-        .lang-btn { background: #e2e8f0; border: none; padding: 6px 12px; font-weight: bold; border-radius: 4px; cursor: pointer; color: var(--dark); margin-left: 5px; font-size: 13px; }
-        .lang-btn.active { background: var(--secondary); color: white; }
-        .header { text-align: center; margin-bottom: 25px; }
-        .header h1 { color: var(--primary); font-size: 22px; margin-bottom: 12px; line-height: 1.4; }
-        .header p { color: #64748b; font-size: 14px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
-        
-        /* Palabras clave solicitadas (Sin fotos) */
-        .ejes-container { text-align: center; margin: 25px 0; padding: 15px; background: #f1f5f9; border-radius: 8px; border-top: 3px solid var(--secondary); }
-        .ejes-title { font-size: 13px; text-transform: uppercase; color: #64748b; letter-spacing: 1px; margin-bottom: 5px; font-weight: bold; }
-        .ejes-palabras { font-size: 18px; color: var(--primary); font-weight: bold; }
-        
-        .description { font-size: 15px; color: #475569; margin-bottom: 30px; line-height: 1.6; text-align: center; }
-        .btn { display: block; text-align: center; background: var(--primary); color: white; padding: 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 16px; transition: background 0.3s; box-shadow: 0 4px 6px rgba(30, 58, 138, 0.2); }
-        .btn:hover { background: var(--secondary); }
-        .footer { text-align: center; margin-top: 40px; font-size: 11px; color: #94a3b8; }
-        [lang="en"] { display: none; }
+        body { background-color: #f8fafc; color: #0f172a; font-family: sans-serif; padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .container { max-width: 500px; width: 100%; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: #1e3a8a; font-size: 20px; margin-bottom: 10px; line-height: 1.4; }
+        .colab { color: #64748b; font-size: 13px; font-weight: bold; text-transform: uppercase; margin-bottom: 20px; }
+        .ejes { font-size: 16px; color: #0284c7; font-weight: bold; margin-bottom: 20px; }
+        .desc { font-size: 14px; color: #475569; margin-bottom: 25px; line-height: 1.5; }
+        .btn-cuestionario { display: block; text-align: center; background: #1e3a8a; color: white; padding: 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 16px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Selector de Idioma -->
-    <div class="lang-switcher">
-        <button id="btn-es" class="lang-btn active" onclick="setLanguage('es')">Español</button>
-        <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">English</button>
-    </div>
+    <h1>Investigación Doctoral: Modelo Práctico de Salud Integral Pastoral</h1>
+    <div class="colab">En colaboración con Send Network</div>
+    
+    <div class="ejes">Nutrición • Ejercicio • Bienestar</div>
 
-    <!-- Sección de Palabras Clave Elegantes -->
-    <div class="ejes-container">
-        <div class="ejes-title" id="ejes-title">Ejes de la Investigación / Research Focus</div>
-        <div class="ejes-palabras" id="ejes-text">Nutrición • Ejercicio • Bienestar</div>
-    </div>
+    <p class="desc">Este cuestionario evalúa los niveles de actividad física, hábitos alimenticios y sintomatología de estrés en el liderazgo ministerial. Toda la información es estrictamente confidencial.</p>
 
-    <!-- CONTENIDO EN ESPAÑOL -->
-    <div id="content-es" lang="es">
-        <div class="header">
-            <h1>Investigación Doctoral: Modelo Práctico de Salud Integral Pastoral</h1>
-            <p>En colaboración con Send Network</p>
-        </div>
-        <div class="description">
-            Este cuestionario evalúa los niveles de actividad física, hábitos alimenticios y sintomatología de estrés en el liderazgo ministerial. Toda la información es estrictamente confidencial.
-        </div>
-        <!-- Enlace de Google Forms corregido sin agregados extraños -->
-        <a href="https://google.com" target="_blank" class="btn">Comenzar cuestionario</a>
-        <div class="footer">
-            <p>© 2026 Proyecto de Investigación Doctoral. Todos los datos recopilados se utilizarán únicamente con fines académicos.</p>
-        </div>
-    </div>
-
-    <!-- CONTENIDO EN INGLÉS -->
-    <div id="content-en" lang="en">
-        <div class="header">
-            <h1>Doctoral Research: Practical Model for Pastoral Comprehensive Health</h1>
-            <p>In collaboration with Send Network</p>
-        </div>
-        <div class="description">
-            This questionnaire evaluates physical activity levels, dietary habits, and stress symptoms in ministerial leadership. All information is strictly confidential.
-        </div>
-        <!-- Enlace de Google Forms corregido en Inglés -->
-        <a href="https://google.com" target="_blank" class="btn">Start survey</a>
-        <div class="footer">
-            <p>© 2026 Doctoral Research Project. All collected data will be used solely for academic purposes.</p>
-        </div>
-    </div>
+    <!-- UN SOLO BOTÓN CON TU ENLACE DIRECTO SIN RODEOS -->
+    <a href="https://google.com" target="_blank" class="btn-cuestionario">Comenzar cuestionario</a>
 </div>
-
-<script>
-    function setLanguage(lang) {
-        const esContent = document.getElementById('content-es');
-        const enContent = document.getElementById('content-en');
-        const btnEs = document.getElementById('btn-es');
-        const btnEn = document.getElementById('btn-en');
-        const ejesText = document.getElementById('ejes-text');
-
-        if (lang === 'es') {
-            esContent.style.display = 'block';
-            enContent.style.display = 'none';
-            btnEs.classList.add('active');
-            btnEn.classList.remove('active');
-            ejesText.innerHTML = "Nutrición • Ejercicio • Bienestar";
-        } else {
-            esContent.style.display = 'none';
-            enContent.style.display = 'block';
-            btnEs.classList.remove('active');
-            btnEn.classList.add('active');
-            ejesText.innerHTML = "Nutrition • Exercise • Well-being";
-        }
-    }
-</script>
 
 </body>
 </html>
